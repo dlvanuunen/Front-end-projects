@@ -1,7 +1,35 @@
-.active{
-  background-color: rgba(194, 24, 117,0.5);
+
+
+
+.task-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-size: 14px;
 }
 
+
+    button{
+      cursor: pointer;
+      height: 40px;
+      border-radius: 5px;
+      padding: 4px 4px;
+      background-color: #395053;
+        
+      border: none;
+      border-radius: 6px;
+      color: white;
+    }
+
+    button:hover{
+      transform: scale(1.05);
+    
+    }
+
+ul{
+  margin-top: 10px;
+}
 
   input[type="checkbox"] {
       appearance: none;
@@ -46,86 +74,46 @@
   text-decoration: line-through;  /* main strikethrough effect */
   color: gray;                    /* optional: make text lighter */
   opacity: 0.7;                   /* optional: subtle fade */
-}
+  }
 
-/* Input & button */
-.task-input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-right: 8px;
-  font-size: 14px;
-}
 
-button {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* Task list */
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 16px;
-}
-
-.task-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  .task-item{
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+      padding: 10px;
   margin-bottom: 6px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #fafafa;
-  transition: background 0.2s ease;
-}
+   transition: background 300ms ease
+  }
 
-.task-item:hover {
-  background-color: #f1f1f1;
-}
+ .task-item p{
+  flex-grow: 1;
+   font-size: 15px;
+ }
 
-/* Text */
-.task-item p {
-  margin: 0;
-  flex: 1;
-  font-size: 15px;
-}
-
-/* Completed task */
-.task-item.completed p {
-  text-decoration: line-through;
-  color: #888;
-}
-
-/* Active (selected) task */
-.active {
-  border-color: #4CAF50;
-  background-color: #eafbea;
-}
-
-.active:hover {
-  border-color: #4CAF50;
-  background-color: #eafbea;
-}
-
-
-
-/* Delete button */
-.task-item button {
+ .task-item button {
   background-color: #e74c3c;
   margin-left: 10px;
 }
 
-.task-item button:hover {
-  background-color: #c0392b;
+ .task-item button:hover {
+     background-color: #c0392b;
+
+  margin-left: 10px;
 }
+
+ .task-item:hover{
+background-color:#f1f1f1;
+cursor: pointer;
+
+ }
+
+.task-item.active{
+  
+  background-color: rgb(229, 253, 216);
+  border-color: #4CAF50;
+}
+

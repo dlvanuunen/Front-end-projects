@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ToDoList from './components/ToDoList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,9 +10,12 @@ function App() {
   return (
     <>
       
-      <h1>Vite + React</h1>
+      <h1>To do list app</h1>
  
-          Edit <code>src/App.jsx</code> and save to test HMR
+      <p> This is a simple to do list app without styling </p>
+
+      <ToDoList/>
+        
 
    
     </>
