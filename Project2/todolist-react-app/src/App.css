@@ -88,10 +88,13 @@ ul {
   border-radius: 6px;
   background-color: #fafafa;
   transition: background 0.2s ease;
+  /* cursor: pointer; */
 }
+
 
 .task-item:hover {
   background-color: #f1f1f1;
+
 }
 
 /* Text */
