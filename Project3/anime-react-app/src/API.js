@@ -14,7 +14,7 @@ export async function getAnime(query) {
     if (!response.ok) throw new Error("Network response was not ok");
     const results = await response.json();
     console.log("data fetched:" , results)
-    return results.data;
+    return results;
   } catch (error) {
     console.error("Error fetching data:", error); 
   }

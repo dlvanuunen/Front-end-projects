@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { getAnime } from "../API";
 
-function SearchBar() {
+
+
+function SearchBar({onSearch}) {
   const [searchInput, setSearchInput] = useState("");
   useEffect(() => {
     console.log("Searchinput changed to:" + searchInput);
   }, [searchInput]);
 
-  const searchForAnime = (searchInput) => {
-        getAnime(searchInput)
-  };
+ 
 
   return (
     <input
       onChange={(e) => setSearchInput(e.target.value)}
       onKeyDown={(e) => {
-        if (e.code === "Enter") {
-          searchForAnime(searchInput);
+        if (e.code === "Enter") {onSearch(searchInput)
+          // searchForAnime(searchInput);
         }
       }}
       placeholder="Type anime here"
