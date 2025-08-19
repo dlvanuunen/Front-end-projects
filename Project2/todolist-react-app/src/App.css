@@ -1,7 +1,4 @@
-.active{
-  background-color: rgba(194, 24, 117,0.5);
-}
-
+/* styles related to the components */
 
   input[type="checkbox"] {
       appearance: none;
@@ -18,7 +15,6 @@
 
     input[type="checkbox"]:checked {
       background: linear-gradient(135deg, #d1ef4c, #91ff00);
-
       box-shadow: 0 0 6px rgba(123, 255, 0, 0.5);
       color: black;
     } 
@@ -38,17 +34,17 @@
 
     input[type="checkbox"]:checked::after {
         transform: rotate(45deg) scale(1);
-          border: solid rgb(0, 0, 0);   /* change this to any color */
+          border: solid rgb(0, 0, 0);   
   border-width: 0 3px 3px 0;
     }
 
     .completed p {
-  text-decoration: line-through;  /* main strikethrough effect */
-  color: gray;                    /* optional: make text lighter */
-  opacity: 0.7;                   /* optional: subtle fade */
+  text-decoration: line-through;  
+  color: gray;                  
+  opacity: 0.7;             
 }
 
-/* Input & button */
+
 .task-input {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -71,7 +67,16 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Task list */
+/* Delete button */
+.task-item button {
+  background-color: #e74c3c;
+  margin-left: 10px;
+}
+.task-item button:hover {
+  background-color: #c0392b;
+}
+
+
 ul {
   list-style: none;
   padding: 0;
@@ -97,7 +102,7 @@ ul {
 
 }
 
-/* Text */
+
 .task-item p {
   margin: 0;
   flex: 1;
@@ -110,7 +115,6 @@ ul {
   color: #888;
 }
 
-/* Active (selected) task */
 .active {
   border-color: #4CAF50;
   background-color: #eafbea;
@@ -123,12 +127,3 @@ ul {
 
 
 
-/* Delete button */
-.task-item button {
-  background-color: #e74c3c;
-  margin-left: 10px;
-}
-
-.task-item button:hover {
-  background-color: #c0392b;
-}
