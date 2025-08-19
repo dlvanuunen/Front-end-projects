@@ -7,9 +7,10 @@ The goal is finish projects within a week (or 2 for larger ones) by creating min
 
 In addition to introductory projects, three projects with specific learning goals will be undertaken:
   - Learn user interactions and rendering by building a simple Go app (the chess like boardgame).
-  - Learn data cleaning, trainsformation and visualisation with D3 and react. => Dashboard.
+  - Learn data cleaning, transformation and visualisation with D3 and react. => Dashboard.
   - Learn navigation/routing and expand on css foundations by building either a portfolio website or webshop. 
    
+
 
 
 
