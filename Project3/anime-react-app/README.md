@@ -8,5 +8,3 @@ Then the anime shows are displayed in cards. Clicking/hovering the card will rev
 
 
 
-## Expanding the ESLint configuration
-
