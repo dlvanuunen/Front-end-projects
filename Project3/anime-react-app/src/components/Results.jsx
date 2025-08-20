@@ -8,7 +8,7 @@ function Results({ animeList }) {
           key={index}
           title={item.title}
           year={item.year}
-          img={item.images.jpg.image_url}
+          img={item.images.jpg.large_image_url}
         />
       );
     })

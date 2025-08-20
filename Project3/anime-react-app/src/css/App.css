@@ -1,0 +1,26 @@
+#root {
+
+  margin: 0 auto;
+  padding: 2em 4em;
+  text-align: center;
+}
+
+
+.search-container{
+  margin-bottom: 2em;
+}
+
+
+.card-container p{
+  width: 100%;
+}
+
+.card-layout{
+  display: grid;
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  gap: 2em;
+}
+
+
+
+
