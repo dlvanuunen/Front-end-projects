@@ -26,7 +26,9 @@ const fakeData={data: [{title:"title1"}, {title:"title2"}]}
       <h1>Anime Search</h1>
       <SearchBar onSearch={searchForAnime} />
          
+      <div className="card-container card-layout">
       <Results animeList={animeList}/>
+      </div>
 
          {/* {animeList.data?.length > 0 &&   <p>{animeList.data[0].title}</p>} */}
          
