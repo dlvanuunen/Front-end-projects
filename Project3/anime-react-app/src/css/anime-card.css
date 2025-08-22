@@ -1,0 +1,185 @@
+.anime-card {
+  position: relative;
+  /* all cards same width */
+  border-radius: 8px;
+  overflow: hidden;
+  /* background-color: #111; */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+
+  position: relative;
+  color: white;
+
+}
+
+.anime-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+/* optional: show "..." if still too long */
+
+
+
+/* Poster */
+.card-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  /* poster controls its own height */
+  overflow: hidden;
+  position: relative;
+}
+
+.card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  z-index: 0;
+  position: relative;
+}
+
+
+.gradient-effect{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+     rgba(0,0,0,0) 40%,        /* transparent at top */
+    rgba(0,0,0,0.9) 70%,     /* medium density around 60% */
+    rgba(0,0,0,1) 90%       /* fully black at bottom */
+  );
+  z-index: 2;
+}
+
+
+.card-label {
+  z-index: 2;
+
+
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  
+
+
+  text-align: left;
+
+  position: absolute;
+  bottom: 0;
+  height: 37%;
+
+  padding: 10px 10px 0px 10px;
+
+}
+
+
+
+
+
+.card-header h3 {
+  /* Required for -webkit-line-clamp */
+  /* Required for -webkit-line-clamp */
+  overflow: scroll;
+  font-size: 1.1rem;
+   text-overflow: ellipsis;
+  line-height: 1em;
+  max-height: calc(1.05em * 2);
+  max-width: 20ch;
+  /* ensures max 2 lines */
+  
+
+}
+
+
+
+
+.card-header p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+    font-size: 1rem;
+
+
+  text-align: left;
+}
+
+.card-footer {
+    z-index: 1;
+  position: absolute;
+  bottom: 10px;        /* distance from bottom */
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .card-footer {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  margin-top: auto;
+}
+
+ */
+
+/* 00000000000000000000000000000000000 */
+
+/* Heart button */
+.card-footer button {
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.9rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ff4d6d;
+  /* heart color */
+
+  cursor: pointer;
+  margin-left: auto;
+  /* pushes it to the right if inside flex container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.card-footer button:hover {
+  background-color: #ff4d6d;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Tags container */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  /* margin-top: 5px; */
+}
+
+/* Individual tags */
+.card-tags span {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.card-tags span:hover {
+  background-color: #ff4d6d;
+  color: white;
+  cursor: default;
+}
