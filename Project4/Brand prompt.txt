@@ -1,0 +1,214 @@
+🌊 Brand Identity: TIDELINE — Ocean Glass Dinnerware
+1. The Product
+
+TIDELINE is a premium collection of plates, bowls, and serveware forged from reclaimed ocean glass. Each piece is unique in color and texture, echoing the ocean’s natural beauty while giving new life to discarded materials.
+
+Unlike generic recycled products, TIDELINE is functional art: every item tells a story of renewal, sustainability, and ocean preservation.
+
+2. Brand Name & Tagline
+
+TIDELINE
+"Crafted by the ocean, shaped for your table."
+
+3. Brand Story
+
+Billions of tons of glass waste pollute coastlines and oceans, but what if beauty could be reborn from it?
+
+At TIDELINE, artisans reclaim ocean glass and transform it into elegant dinnerware. No two pieces are the same — each carries the tide’s signature. Every meal served becomes a reminder of the ocean’s resilience and the importance of protecting it.
+
+4. Target Audience
+
+Eco-conscious consumers who want sustainable home goods.
+
+Design lovers drawn to artisanal, one-of-a-kind items.
+
+Hospitality & fine dining restaurants seeking sustainable luxury.
+
+Gift market (weddings, housewarmings, anniversaries).
+
+5. Visual Identity
+
+Logo: A circular ripple motif enclosing a wave-like glass shard silhouette.
+
+Color Palette:
+
+Seafoam Green (#8DC6B5) → Ocean vitality
+
+Deep Navy (#1E3D59) → Depth & sophistication
+
+Driftwood Beige (#EAE0D5) → Natural warmth
+
+Clear Frost (#F6F6F6) → Transparency & purity
+
+Typography:
+
+Headlines: Canela (elegant serif, luxury feel)
+
+Body: Neue Haas Grotesk (modern, clean sans-serif).
+
+Imagery: Macro shots of textured glass, ocean waves, and plated meals glowing against natural light.
+
+6. Tone of Voice
+
+Refined, poetic, yet grounded in sustainability.
+
+Storytelling emphasizes beauty and responsibility.
+
+Example: Instead of “100% recycled,” → “Every shard reborn carries the story of a tide.”
+
+7. Website Structure
+Homepage
+
+Hero: Full-screen video of ocean waves receding, revealing a glowing glass plate.
+
+Headline: “Dinnerware reborn from the ocean.”
+
+CTA: Shop the Collection
+
+Collection Page
+
+Grid of product categories: Plates, Bowls, Serving Pieces, Gift Sets.
+
+Each piece shown with close-up textures + note: “No two are alike.”
+
+Story Page
+
+Journey of transformation:
+
+Glass waste reclaimed.
+
+Artisan forging process.
+
+Finished unique piece.
+
+Highlight: “Every purchase funds ocean cleanup.”
+
+Sustainability Page
+
+Data on glass waste.
+
+Partnership with ocean cleanup NGOs.
+
+Interactive map showing collection sites.
+
+Shop Page
+
+Minimal, high-end e-commerce layout.
+
+Options: single piece, curated set, gift box.
+
+8. Packaging Design
+
+Matte navy box with embossed ripple logo.
+
+Inner padding of recycled pulp fiber.
+
+Story card inside: “This piece once drifted with the tide. Now it rests at your table.”
+
+9. Marketing Strategy
+
+Launch Campaign: “Every Piece Has a Tide” — short videos showcasing the transformation of discarded glass into luxury tableware.
+
+Partnerships: Coastal restaurants + eco-lodges using TIDELINE exclusively.
+
+Influencer strategy: Interior designers, sustainable living creators.
+
+PR angle: “Turning ocean waste into the future of sustainable dining.”
+
+10. Brand Extensions
+
+Limited Edition Artist Series → collaborations with glass artists for sculptural dinnerware.
+
+Ocean-Glass Lighting Collection → pendant lamps and sconces.
+
+Restaurant Partnerships → branded sets for fine dining experiences.
+
+
+
+
+
+
+The Prompt for Figma make
+Design a landing page in Figma for the brand “TIDELINE — Ocean Glass Dinnerware.”
+
+Overall Style:
+
+Premium, artisanal, and eco-conscious.
+
+Minimal, elegant layout with large imagery.
+
+Color palette: Seafoam Green (#8DC6B5), Deep Navy (#1E3D59), Driftwood Beige (#EAE0D5), and Clear Frost (#F6F6F6).
+
+Typography:
+
+Headings: Canela (elegant serif, luxury feel).
+
+Body: Neue Haas Grotesk (clean modern sans-serif).
+
+Sections to Include:
+
+Hero Section
+
+Full-width background image or video of ocean waves.
+
+Centered headline: “Dinnerware reborn from the ocean.”
+
+Subtext: “Crafted by the ocean, shaped for your table.”
+
+CTA Button: Shop the Collection (primary).
+
+Product Showcase
+
+Grid of 3–4 product cards (plates, bowls, serving pieces).
+
+Each card: close-up texture photo, name, and price.
+
+Note: “Every piece is unique.”
+
+The Story
+
+Two-column layout.
+
+Left: Photo of artisan working with molten glass.
+
+Right: Text block with story: “Every shard reborn carries the story of a tide.”
+
+Secondary CTA: Discover Our Story.
+
+Sustainability Impact
+
+Minimal infographic-style section.
+
+Icons for: “Reclaimed Ocean Glass,” “Hand-Forged,” “Funds Ocean Cleanup.”
+
+Interactive feel (but static for mockup).
+
+Lifestyle Photography Section
+
+Full-width image of an elegant dining setup featuring TIDELINE.
+
+Overlay text: “Luxury with purpose.”
+
+Call to Action Banner
+
+Background: textured sea glass photography.
+
+Bold headline: “Bring the ocean’s beauty to your table.”
+
+Button: Shop Now
+
+Footer
+
+Links: Shop, Story, Sustainability, Contact.
+
+Small ripple logo mark.
+
+Social icons (minimal style).
+
+Additional Notes:
+
+Clean, spacious design with generous white space.
+
+Photography-driven, with text overlays where appropriate.
+
+Use subtle wave/ripple motifs in section dividers or accents.

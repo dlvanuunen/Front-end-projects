@@ -1,0 +1,151 @@
+🌊 TIDELINE Brand Kit Overview
+1. Typography
+
+Headings: Canela — elegant serif, evokes luxury/artisanal quality.
+
+Body: Neue Haas Grotesk — clean modern sans-serif, ensures readability.
+
+Fallback pairing: Playfair Display (headings) + Inter (body) if system/web-safe.
+
+2. Color Scheme Variants
+Primary Scheme (Light)
+
+Seafoam Green: #8DC6B5
+
+Light tint: #C9E3DA
+
+Dark tint: #3D6F61
+
+Deep Navy: #1E3D59
+
+Light tint: #506C8B
+
+Dark tint: #0D1B2B
+
+Driftwood Beige: #EAE0D5
+
+Light tint: #F7F2EC
+
+Dark tint: #B8A898
+
+Clear Frost: #F6F6F6
+
+Light tint: #FFFFFF
+
+Dark tint: #D4D4D4
+
+Dark Mode Scheme
+
+Midnight Navy: #0D1B2B
+
+Light tint: #3A506B
+
+Dark tint: #050A12
+
+Seafoam Highlight: #8DC6B5
+
+Light tint: #BFE2D5
+
+Dark tint: #2E544A
+
+Glass Frost: #E2F1EC
+
+Light tint: #F7FAF8
+
+Dark tint: #9DBBB1
+
+Accent Coral (optional pop): #E6B7A6
+
+Light tint: #F6DAD0
+
+Dark tint: #9B6E5C
+
+Alternative (No Driftwood Beige)
+
+Seafoam Green: #8DC6B5
+
+Light tint: #C9E3DA
+
+Dark tint: #3D6F61
+
+Deep Navy: #1E3D59
+
+Light tint: #506C8B
+
+Dark tint: #0D1B2B
+
+Clear Frost: #F6F6F6
+
+Light tint: #FFFFFF
+
+Dark tint: #D4D4D4
+
+Glass Aqua Accent: #A8DADC
+
+Light tint: #D1EFEF
+
+Dark tint: #4A8B8D
+
+3. Icons Needed (Minimal Line Style)
+
+🌊 Ocean / Wave (reclaimed ocean glass)
+
+🔥 Fire / Flame (hand-forged process)
+
+🌱 Leaf / Plant (sustainability impact)
+
+📦 Package / Gift box (for packaging & gifting)
+
+🛒 Shopping bag (for CTA/shop buttons)
+
+📖 Book / Info (story/brand values)
+
+📍 Location pin (collection sites map)
+
+📷 Camera / Gallery (user content)
+
+♻️ Recycle (eco-conscious storytelling)
+
+Social media icons (Instagram, Pinterest, LinkedIn, YouTube).
+
+4. Image Titles to Collect/Produce
+
+Hero Image — Ocean waves receding, luxury table reveal.
+
+Product Hero Plate — Elegant dinner plate, reclaimed sea glass, translucent aqua tones, on white.
+
+Product Hero Bowls — Set of artisanal bowls, frosted textures, top-down on white.
+
+Artisan at Work — Glass artisan forging or shaping molten glass.
+
+Lifestyle Dining (Daylight) — Luxury dining table near an ocean-view window, minimalist Scandinavian setting.
+
+Lifestyle Dining (Chef) — Close-up of chef plating food on translucent ocean-glass dinnerware, moody fine dining vibe.
+
+Macro Texture Shot — Close-up of ocean glass surface, frosted detail.
+
+Sustainability Visual — Ocean cleanup team collecting glass waste (documentary feel).
+
+Packaging — TIDELINE box with embossed ripple logo, plate/bowl nestled inside.
+
+Social/UGC — Casual shot of home table setup with TIDELINE dinnerware in daily use.
+
+5. Other Assets to Collect/Produce
+
+Logo (ripple motif with wave-shard element).
+
+Wordmark (“TIDELINE” in Canela, refined kerning).
+
+Favicon / App Icon (simplified ripple or wave).
+
+Patterns/Textures — subtle wave lines, frosted glass textures for section backgrounds.
+
+Typography files — Canela + Neue Haas Grotesk (or licensed equivalents).
+
+Icon set — consistent line-weight, minimalist.
+
+Illustrations (optional) — abstract ripple dividers, eco-symbol sketches.
+
+Mockups — lifestyle photos with table settings, packaging box renders.
+
+Infographics — sustainability stats, ocean cleanup data visuals.
