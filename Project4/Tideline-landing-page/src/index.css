@@ -1,0 +1,39 @@
+/* index.css */
+
+/* Reset & basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.5;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Root container */
+#root {
+  width: 100%;
+  max-width: 1280px;  /* constrain large screens */
+  margin: 0 auto;      /* center horizontally */
+  padding: 2rem;
+}
+
+/* Example Nav */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container ul {
+  display: flex;
+  gap: 1.5rem;  /* better than flex-direction + spacing */
+  list-style: none;
+}
