@@ -12,13 +12,18 @@ function App() {
 
   return (
     <>
-      <NavBar/>
+     <header>
+       <NavBar/>
+   </header>
+   <HeroSection />
 
-      <HeroSection />
+<main>
       <ProductSection />
+        </main>
       {/* <StorySection />
       <ImpactSection />
       <CtaSection />
+    
       <FooterSection /> */}
     </>
   );

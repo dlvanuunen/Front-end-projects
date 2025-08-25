@@ -1,0 +1,155 @@
+:root {
+
+
+
+
+  --color-primary: #8DC6B5;
+  --color-primary-light: #C9E3DA;
+  --color-primary-dark: #3D6F61;
+
+  --color-primary-opacity: rgb(141, 198, 181,0.7);
+
+
+  --color-secondary: #1E3D59;
+  --color-secondary-light: #506C8B;
+  --color-secondary-dark: #0D1B2B;
+
+  --color-tertiary: #EAE0D5;
+  --color-tertiary-light: #F7F2EC;
+  --color-tertiary-dark: #B8A898;
+
+  --color-neutral-light-500: #F6F6F6;
+  --color-neutral-light-100: #FFFFFF;
+  --color-neutral-light-900: #D4D4D4;
+
+  --color-neutral-dark-100: #444444; 
+  --color-neutral-dark-500: #333333; 
+  --color-neutral-dark-900: #222222; 
+
+  
+    --color-blue-dark-900: #101828;          
+  --color-blue-dark-500: hsl(223, 28%, 23%);    
+  --color-blue-dark-100: #505C7A; 
+
+
+
+
+
+  --color-accent: #E6B7A6;
+  --color-accent-light: #F6DAD0;
+  --color-accent-dark: #9B6E5C;
+ 
+    --color-accent-bright: #FF7F6B;
+    --color-accent-bright-light: #FFA694;
+    --color-accent-bright-dark: #CC6654;
+
+
+
+  /* ------------------- Fonts ------------------- */
+/* Old */
+
+  /* --font-heading: 'Canela', serif;
+  --font-body: 'Neue Haas Grotesk', sans-serif;
+  --font-fancy: 'Playfair Display', serif; */
+
+
+
+  --font-heading: 'Canela', serif;         
+  --font-fancy: 'Cormorant Garamond', serif; 
+  --font-body: 'Neue Haas Grotesk', sans-serif; 
+
+  --font-button: 'M PLUS Rounded 1c', sans-serif;
+     /* --font-button: 'Arial', sans-serif; */
+
+  /* ------------------- Font sizes------------------- */
+
+  --font-size-hero: 4rem;   
+  
+  
+  --font-size-h1: 3rem;   
+  --font-size-h2: 2.25rem;
+  --font-size-h3: 1.875rem; 
+  --font-size-h4: 1.5rem; 
+  --font-size-h5: 1.25rem; 
+  --font-size-h6: 1rem;   
+
+  --font-size-body-lg: 1.125rem; 
+  --font-size-body-md: 1rem;     
+  --font-size-body-sm: 0.875rem; 
+  --font-size-caption: 0.75rem;
+
+
+  /* ------------------- Font weights ------------------- */
+  --font-weight-heading: 500;
+  --font-weight-body: 400;
+  --font-weight-bold: 700;
+    --font-weight-semibold:600;
+  --font-weight-medium: 500;
+  --font-weight-light: 300;
+}
+
+
+/* Reset & basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-neutral-light-500);
+  color: var(--color-neutral-dark-500);
+  line-height: 1.5;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-heading);
+}
+
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-heading);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-heading);
+
+}
+
+p {
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-body);
+}
+
+
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+}
+
+
+
+
+
+
+/* Root container */
+#root {
+  width: 100%;
+  /* max-width: 1280px;  constrain large screens */
+  margin: 0;
+  /* center horizontally */
+  background-color: transparent;
+}
