@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar";
 import HeroSection from "./Components/HeroSection";
 import ProductSection from "./Components/ProductSection";
 import StorySection from "./Components/StorySection";
+import ImpactSection from "./Components/ImpactSection";
 
 
 function App() {
@@ -22,13 +23,13 @@ function App() {
 <main>
       <ProductSection />
    <StorySection />
-
+      <ImpactSection />
       </main>
 
-      {/* <ImpactSection />
-      <CtaSection />
+
+      {/* <CtaSection />
     
-      <FooterSection /> */}
+      <FooterSection />  */}
     </>
   );
 }

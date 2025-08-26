@@ -4,6 +4,12 @@ function StorySection() {
   return (
     <>
       <section className="story">
+        <div className="story-container column">
+
+      
+        <img src="/images/raw-glass.jpg"></img>
+             <div className="story-text">
+
         <h2>The Story</h2>
 
         <p>
@@ -25,7 +31,10 @@ function StorySection() {
         </p>
 
         <CtaButton text="Discover Our Story" type="alt" />
-        <img src="/images/raw-glass.jpg"></img>
+       </div>
+        
+        
+        </div>
       </section>
     </>
   );
