@@ -5,6 +5,7 @@ import "./App.css";
 import NavBar from "./Components/NavBar";
 import HeroSection from "./Components/HeroSection";
 import ProductSection from "./Components/ProductSection";
+import StorySection from "./Components/StorySection";
 
 
 function App() {
@@ -14,14 +15,17 @@ function App() {
     <>
      <header>
        <NavBar/>
-   </header>
+
    <HeroSection />
+      </header>
 
 <main>
       <ProductSection />
-        </main>
-      {/* <StorySection />
-      <ImpactSection />
+   <StorySection />
+
+      </main>
+
+      {/* <ImpactSection />
       <CtaSection />
     
       <FooterSection /> */}

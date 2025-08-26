@@ -1,8 +1,5 @@
 :root {
 
-
-
-
   --color-primary: #8DC6B5;
   --color-primary-light: #C9E3DA;
   --color-primary-dark: #3D6F61;
@@ -89,22 +86,14 @@
 }
 
 
-/* Reset & basic styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+ /* basic styles */
 
 body {
   font-family: var(--font-body);
   background-color: var(--color-neutral-light-500);
   color: var(--color-neutral-dark-500);
   line-height: 1.5;
-  min-width: 320px;
-  min-height: 100vh;
 }
-
 
 h1,h2,h3,h4,h5,h6{
   font-family: var(--font-heading);
@@ -128,7 +117,6 @@ p {
 }
 
 
-
 ul,
 li {
   list-style: none;
@@ -140,16 +128,3 @@ a {
 
 }
 
-
-
-
-
-
-/* Root container */
-#root {
-  width: 100%;
-  /* max-width: 1280px;  constrain large screens */
-  margin: 0;
-  /* center horizontally */
-  background-color: transparent;
-}

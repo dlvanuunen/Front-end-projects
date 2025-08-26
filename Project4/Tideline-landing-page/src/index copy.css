@@ -1,51 +1,14 @@
 /* index.css */
-
-
-/* Root container */
-#root {
-  width: 100%;
-  /* max-width: 1280px;  constrain large screens */
-  margin: 0;
-  /* center horizontally */
-  background-color: transparent;
-}
-
-/* Css reset and general element styling */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-
-
+/* 
+Common seting for section
 section{
     display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 3rem;
-} 
-
-h2{
-margin-top: 2rem;
-}
-
-img {
-  width: 100%; 
-}
+} */
 
 
-
-
-
-/* Specific styling */
 
 nav {
   width: 100%;
@@ -127,6 +90,7 @@ nav {
   align-items: center;
 
  gap: 1rem;
+  margin: 0 3rem;
 
 
   color: var(--color-neutral-light-100);
@@ -188,7 +152,7 @@ nav {
 
 
 .product {
-  justify-content: start;
+  margin: 0 auto;
  box-shadow: 0px 10px 5px #b4b4b4, 0px -10px 5px #a8a8a8;
   background-color: var(--color-tertiary-light);
 
@@ -196,7 +160,7 @@ nav {
 }
 
 .product-container {
-  width: 100%;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,6 +170,9 @@ nav {
 
 }
 
+.product-container h2{
+    margin: 2rem;
+}
 
 .card-container {
   margin: 0 auto;
@@ -217,6 +184,9 @@ nav {
 
   color: var(--color-blue-dark-500);
 }
+
+
+
 
 
 .story{
