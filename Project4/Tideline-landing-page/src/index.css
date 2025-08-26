@@ -10,67 +10,71 @@
   background-color: transparent;
 }
 
-/* Css reset and general element styling */
-
+/* Css reset and general html element styling */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   min-width: 320px;
   min-height: 100vh;
 }
 
 
-
-section{
-    display: flex;
+section {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 3rem;
-} 
+}
 
-h2{
-margin-top: 2rem;
+h2 {
+  margin-top: 2rem;
 }
 
 img {
-  width: 100%; 
+  width: 100%;
+  border-radius: 15px;
 }
-
 
 
 
 
 /* Specific styling */
 
+
+/* Sticky Navbar */
 nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: linear-gradient(
-    rgba(18, 52, 66, 0.2), 
-    rgba(18, 52, 66, 0)
-  );
-  z-index: 1000;
-  padding: 0 2rem;
-}
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    padding: 0 2rem;
+
+    background: linear-gradient(rgba(18, 52, 66, 0.2),
+      rgba(18, 52, 66, 0));
+  }
 
 
 .nav-container {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
+  height: 4rem;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 3rem;
+
+  font-size: var(--font-size-cta);
   color: var(--color-neutral-light-100);
 }
 
+/* Navbar contents */
 .nav-container ul {
   display: flex;
   justify-content: center;
@@ -80,21 +84,20 @@ nav {
 
 .nav-container li {
   position: relative;
-
 }
 
 .nav-container li a:not(.cta-button) {
   display: block;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   padding: 0.5rem 1rem;
 }
 
-.nav-container li .cta-button {
-  height: 20%;
+.nav-container .cta-button {
   padding: 0.25em 1.2em;
+  padding: 0.4em 1.5em;
+  font-size: var(--font-size-cta);
 }
-
 
 .nav-container li:hover {
   color: var(--color-primary-light);
@@ -103,35 +106,33 @@ nav {
 
 
 
-.hero{
-    background:
+
+
+
+
+/* Hero Section */
+
+.hero {
+  background:
     radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 45%),
     linear-gradient(rgba(0, 25, 75, 0.1), rgba(0, 25, 75, 0.1)),
-
     url("/images/hero3.jpg") no-repeat center center scroll;
   background-size: cover;
   background-color: black;
 
 }
 
-
-
 .hero-container {
-
   /* filter: brightness(90%) contrast(90%); */
-
   height: 100vh;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
- gap: 1rem;
-
+  gap: 1rem;
 
   color: var(--color-neutral-light-100);
 }
-
 
 
 .hero-container h1 {
@@ -144,13 +145,14 @@ nav {
 }
 
 .hero-container p {
+  color: var(--color-neutral-light-100);
+  
   font-size: var(--font-size-h3);
   font-family: var(--font-fancy);
   font-weight: var(--font-weight-light);
   font-style: italic;
   /* margin: 0rem 2rem 1.25rem 2rem; */
 
-  color: var(--color-neutral-light-100);
   margin-bottom: 0.5rem;
 }
 
@@ -172,7 +174,6 @@ nav {
   background-color: var(--color-primary);
 
   transition: all 250ms ease;
-
 }
 
 
@@ -181,15 +182,17 @@ nav {
   translate: 0 +1px;
   background-color: var(--color-primary-opacity);
   color: var(--color-neutral-light-100);
-
-
 }
 
 
 
+
+
+/* Product preview section */
+
 .product {
   justify-content: start;
- box-shadow: 0px 10px 5px #b4b4b4, 0px -10px 5px #a8a8a8;
+  box-shadow: 0px 10px 5px #b4b4b4, 0px -10px 5px #a8a8a8;
   background-color: var(--color-tertiary-light);
 
   height: 600px;
@@ -219,10 +222,47 @@ nav {
 }
 
 
-.story{
+
+
+
+/* Story section */
+
+
+
+
+.story {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 1.25rem;
+  color: var(--color-secondary-grey);
+  background: rgb(255, 255, 255);
 
+
+}
+
+.story h2 {
+  margin-top: 4rem;
+  color: var(--color-blue-dark-500);
+}
+
+.story p:last-of-type {
+  margin-bottom: .75rem;
+}
+
+
+.cta-altstyle {
+  background-color: var(--color-neutral-light-500);
+  border: 1px solid;
+  border-color: var(--color-primary);
+}
+
+.cta-altstyle:hover {
+  background-color: var(--color-primary);
+}
+
+.cta-altstyle {
+  margin-bottom: 1.25rem;
+  font-size: var(--font-size-body-sm);
 }
