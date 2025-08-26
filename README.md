@@ -5,11 +5,12 @@ Here I take a more structured approach while also expanding my skillset to inclu
 
 The goal is finish projects within a week (or 2 for larger ones) by creating minimal viable products (MVP's). With this approach, the focus is on learning and improving, not on finishing polished products.
 
-In addition to introductory projects, three projects with specific learning goals will be undertaken:
-  - Learn user interactions and rendering by building a simple Go app (the chess like boardgame).
+Potential future projects:
   - Learn data cleaning, transformation and visualisation with D3 and react. => Dashboard.
+  - Learn user interactions and rendering by building a simple Go app (the chess like boardgame).
   - Learn navigation/routing and expand on css foundations by building either a portfolio website or webshop. 
    
+
 
 
 
