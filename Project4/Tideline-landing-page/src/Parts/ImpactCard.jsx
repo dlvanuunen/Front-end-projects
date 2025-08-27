@@ -1,23 +1,32 @@
+import { PiRecycleBold } from "react-icons/pi";
+import { LuHammer } from "react-icons/lu";
+import { CiHeart } from "react-icons/ci";
+import { FaRegHeart } from "react-icons/fa";
 
+function ImpactCard({icon="recycle", header="header", text="Lorem ipsum dolor sit amet consectetur adipisicing."}) {
 
+    const icons={"recycle":  <PiRecycleBold className="icon"/>, "hammer":  <LuHammer className="icon"/>, "heart":  <FaRegHeart className="icon"/>}
 
-function ImpactCard(){
+  return (
+    <>
+      <div className="impact-card">
+      
+<div className="icon-container">
 
-    return<>
+<div className="circle">
+        {icons[icon]}
+</div>
+</div>
+      
+      
     
-    <div className="impact-card">
-
-          <img src="https://via.placeholder.com/50" alt="icon" />
-        <h3> test </h3>
-
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-
-
-    </div>
-    
-    
+      
+      
+        <h3> {header}</h3>
+        <p>{text} </p>
+      </div>
     </>
+  );
 }
 
-
-export default ImpactCard
+export default ImpactCard;

@@ -28,11 +28,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 h2 {
   margin-top: 2rem;
+  color: var(--color-blue-dark-500);
 }
 
 img {
@@ -42,13 +44,17 @@ img {
 
 /* max width on all containers, allowing the background images/colours to still be max vw */
 
-.nav-container, .hero-container, .product-container, .story-container{
-    max-width: 1050px;
+.nav-container,
+.hero-container,
+.product-container,
+.story-container {
+  max-width: 1050px;
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: row;
+  padding: 3rem 0;
 }
 
 
@@ -60,20 +66,20 @@ img {
 
 /* Sticky Navbar */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 
-    padding: 0 2rem;
+  padding: 0 2rem;
 
-    background: linear-gradient(rgba(18, 52, 66, 0.2),
+  background: linear-gradient(rgba(18, 52, 66, 0.2),
       rgba(18, 52, 66, 0));
-  }
+}
 
 
 .nav-container {
-  margin: 1rem auto 0 auto;
+  margin: 0.5rem auto 0 auto;
   height: 4rem;
 
   display: flex;
@@ -159,7 +165,7 @@ nav {
 
 .hero-container p {
   color: var(--color-neutral-light-100);
-  
+
   font-size: var(--font-size-h3);
   font-family: var(--font-fancy);
   font-weight: var(--font-weight-light);
@@ -193,7 +199,7 @@ nav {
 .cta-button:hover {
   text-decoration: none;
   translate: 0 +1px;
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary-opacity-70);
   color: var(--color-neutral-light-100);
 }
 
@@ -207,9 +213,16 @@ nav {
   justify-content: start;
   box-shadow: 0px 10px 5px #b4b4b4, 0px -10px 5px #a8a8a8;
   background-color: var(--color-tertiary-light);
-
   height: 600px;
+  padding: 0 4rem;
+
+
 }
+
+.product h2 {
+  color: var(--color-primary);
+}
+
 
 .product-container {
   width: 100%;
@@ -217,8 +230,6 @@ nav {
   flex-direction: column;
   align-items: center;
   height: 250px;
-
-  color: var(--color-primary);
 
 }
 
@@ -239,14 +250,12 @@ nav {
 
 
 /* Story section */
-.story{
+.story {
   background: rgb(255, 255, 255);
 }
 
-.story-container{
-  padding: 4rem 0;
+.story-container {
   gap: 3rem
-  
 }
 
 .story-text {
@@ -256,9 +265,6 @@ nav {
   align-items: flex-start;
   gap: 1.25rem;
   color: var(--color-secondary-grey);
-
-
-
 }
 
 
@@ -293,4 +299,81 @@ nav {
 .cta-altstyle {
   margin-bottom: 1.25rem;
   font-size: var(--font-size-body-sm);
+}
+
+
+
+
+
+
+
+
+/*Sustainability impact section */
+
+
+.impact {
+  flex-direction: column;
+  color: var(--color-blue-dark-500);
+  background-color: var(--color-tertiary);
+
+}
+
+.impact h2 {
+
+  margin-top: .75rem;
+  margin-bottom: 3.25rem;
+}
+
+.impact p {
+color: var(--color-secondary-grey);
+ margin-top: -0.5rem;
+}
+
+
+.impact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+
+}
+
+
+.impact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.circle {
+  background-color: var(--color-primary-opacity-30);
+  border-radius: 50%;
+  height: 4.2rem;
+  width: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+ 
+
+
+}
+
+.circle .icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+
+.circle:hover {
+  background-color: var(--color-primary-opacity-50);
+   transition: all 600ms ease;
 }
