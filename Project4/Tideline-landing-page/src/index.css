@@ -166,7 +166,7 @@ nav {
 .hero-container p {
   color: var(--color-neutral-light-100);
 
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-hero-p);
   font-family: var(--font-fancy);
   font-weight: var(--font-weight-light);
   font-style: italic;
