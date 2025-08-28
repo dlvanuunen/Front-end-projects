@@ -5,7 +5,8 @@ import HeroSection from "./Components/HeroSection";
 import ProductSection from "./Components/ProductSection";
 import StorySection from "./Components/StorySection";
 import ImpactSection from "./Components/ImpactSection";
-import CtaSection from "./Components/CtaSection";
+import CtaSections from "./Components/CtaSections";
+import FooterSection from "./Components/FooterSection";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,11 +22,12 @@ function App() {
         <ProductSection />
         <StorySection />
         <ImpactSection />
-        <CtaSection />
+        <CtaSections />
+         
       </main>
-
-      {/*     
-      <FooterSection />  */}
+      <footer>
+          <FooterSection /> 
+    </footer>
     </>
   );
 }

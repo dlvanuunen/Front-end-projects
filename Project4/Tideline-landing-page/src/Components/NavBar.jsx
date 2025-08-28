@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <>
 
-      <nav>
+      <nav className="nav-bar">
         <div className="nav-container">
           <a href="/">
             <img src="logo.svg" alt="Logo " />

@@ -2,9 +2,9 @@
 
 function CtaButton({text, type=""}){
 
-const classes= type==="alt"  ? "cta-button cta-altstyle" : "cta-button"
+const classes= {"alt": "cta-altstyle", "blue": "cta-blue", "": ""}
 
-return <a href="#" className={classes}>{text}</a>    
+return <a href="#" className={"cta-button "+classes[type]}>{text}</a>    
 // Replace with styled link instead later...
 
 }
