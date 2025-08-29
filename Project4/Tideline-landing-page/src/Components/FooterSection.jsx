@@ -1,4 +1,9 @@
 import Logo from "../Parts/logo";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { SlSocialTwitter } from "react-icons/sl";
+import { LuFacebook } from "react-icons/lu";
 
 function FooterSection() {
   return (
@@ -16,28 +21,32 @@ function FooterSection() {
               <a href="#">shop </a>
             </li>
             <li>
-              <a href="#">shop </a>
+              <a href="#">Story</a>
             </li>
             <li>
-              <a href="#">shop </a>
+              <a href="#">Sustainability </a>
             </li>
             <li>
-              <a href="#">shop </a>
+              <a href="#">Contact</a>
             </li>
           </ul>
         </nav>
 
 
 <div className="socials">
+<div className="circle"><FaInstagram className="icon"/></div>
 
-    <p>inst</p>
-<p>inst</p><p>inst</p>
+
+<div className="circle"><LuFacebook className="icon"/></div>
+<div className="circle"><SlSocialTwitter className="icon" /></div>
+ 
+
+
 </div>
 
 
 <p className="copyright">
-
-    C copywrifth blabla
+    © 2025 TIDELINE. All rights reserved.
 </p>
 </div>
 
