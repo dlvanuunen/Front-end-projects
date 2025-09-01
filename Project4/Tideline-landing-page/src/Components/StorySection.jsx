@@ -7,7 +7,7 @@ function StorySection() {
         <div className="story-container column">
 
       
-        <img src="/images/raw-glass.jpg"></img>
+        <img src="/images/glass-craft.jpg"></img>
              <div className="story-text">
 
         <h2>The Story</h2>
