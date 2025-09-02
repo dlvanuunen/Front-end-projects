@@ -1,0 +1,23 @@
+:root{
+/* eutral */
+/* Neutral */
+--bg: #101418;
+--surface: #1E2329;
+
+/* Core */
+--primary: #274690;   /* indigo */
+--secondary: #9B2226; /* oxblood */
+--tertiary: #FF6700;  /* hot orange */
+
+/* Accents */
+--accent-green: #2D6A4F;
+--accent-pink: #D81B60;
+
+/* Neon Variants */
+--neon-primary: #437CFF;
+--neon-secondary: #FF3366;
+--neon-tertiary: #FF8C42;
+--neon-green: #32FF7E;
+--neon-pink: #FF5CA8;
+
+}

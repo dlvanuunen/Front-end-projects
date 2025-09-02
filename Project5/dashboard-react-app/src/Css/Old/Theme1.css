@@ -1,0 +1,23 @@
+:root{
+
+
+/* Neutral */
+--bg: #121212;
+--surface: #1c1c1e;
+
+/* Core */
+--primary: #5A8FCE;   /* teal-blue */
+--secondary: #8034A6; /* deep violet */
+--tertiary: #C13C3C;  /* crimson */
+
+/* Accents */
+--accent-pink: #E94C88;
+--accent-green: #4CAF50;
+
+/* Neon Variants */
+--neon-primary: #4DBFFF;
+--neon-secondary: #B84DFF;
+--neon-tertiary: #FF4D4D;
+--neon-pink: #FF5CA8;
+--neon-green: #00FF99;
+}

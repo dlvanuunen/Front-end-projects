@@ -1,0 +1,347 @@
+/* =========================
+   Root Variables & Themes
+   ========================= */
+:root {
+
+  margin: 0;
+  padding: 0;
+
+
+
+  /* Light theme neutrals */
+  --color-bg: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f7f9;
+  --color-overlay: rgba(0, 0, 0, 0.05);
+  --color-border: #d1d5db;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-inverted: #ffffff;
+
+  /* Primary palette (equal hierarchy) */
+  --color-primary: #2c7a7b;
+  /* teal green */
+  --color-secondary: #b83280;
+  /* magenta rose */
+  --color-tertiary: #dd6b20;
+  /* burnt orange */
+  --color-quaternary: #3182ce;
+  /* deep blue */
+  --color-quinary: #ecc94b;
+  /* warm yellow */
+
+  /* Hover states */
+  --color-primary-hover: #256869;
+  --color-secondary-hover: #962967;
+  --color-tertiary-hover: #c05621;
+  --color-quaternary-hover: #2563a6;
+  --color-quinary-hover: #d4b034;
+
+  /* Neon variants (charts, highlights, alerts) */
+  --neon-primary: #00f5d4;
+  --neon-secondary: #ff4fa3;
+  --neon-tertiary: #ff6a00;
+  --neon-quaternary: #00bfff;
+  --neon-quinary: #ffd93d;
+
+  /* Utility */
+  --radius: 0.75rem;
+
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+  --transition: 0.2s ease-in-out;
+}
+
+[data-theme="dark"] {
+  /* --color-bg:#23272f; */
+  --color-bg: hsl(220, 17%, 7%);
+  --color-surface: hsl(218, 13%, 12%);
+  --color-surface-alt: hsl(219, 15%, 8%);
+  --color-overlay: rgba(12, 6, 6, 0.05);
+  --color-border: #2e3238;
+  --color-text: #e5e7eb;
+
+  --color-muted: #9ca3af;
+  --color-inverted: #0f1115;
+
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+
+
+
+
+
+  /* Font families */
+  --font-sans: "Inter", "Segoe UI", Roboto, sans-serif;
+
+  /* Text scales */
+  --text-small-size: 0.875rem;
+  --text-small-weight: 400;
+  --text-small-family: var(--font-sans);
+
+  --text-medium-size: 1rem;
+  --text-medium-weight: 400;
+  --text-medium-family: var(--font-sans);
+
+  --text-large-size: 1.25rem;
+  --text-large-weight: 500;
+  --text-large-family: var(--font-sans);
+
+  /* Extras for specific use cases */
+  --text-heading-size: 2rem;
+  --text-heading-weight: 600;
+
+  --text-kpi-size: 2rem; /* KPI card values */
+  --text-kpi-weight: 700;
+
+  --text-label-size: 0.875rem; /* Muted labels / metadata */
+  --text-label-weight: 400;
+}
+
+
+
+/* =========================
+   Base Styles and Css reset
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.wrapper {
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 2rem;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+
+}
+
+.spacer {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 0.5em 0;
+  color: var(--color-text);
+  /* <- explicitly set */
+}
+
+p {
+  margin: 0.5em 0;
+  color: var(--color-text);
+}
+
+/* =========================
+   Layout Utilities
+   ========================= */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
+  box-shadow: var(--shadow-md);
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* =========================
+   Components
+   ========================= */
+
+/* Navbar */
+.navbar {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-tabs a {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.navbar-tabs a.active,
+.navbar-tabs a:hover {
+  background: var(--color-primary);
+  color: var(--color-inverted);
+}
+
+/* Buttons */
+button,
+.btn {
+  background: var(--color-primary);
+  color: var(--color-inverted);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition);
+  font-weight: 500;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--color-primary-hover);
+}
+
+button:disabled {
+  background: var(--color-muted);
+  cursor: not-allowed;
+}
+
+/* KPI Cards */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+.card .label {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* Filters / Controls */
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+input[type="text"],
+select {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.25rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background: var(--color-border);
+  border-radius: 9999px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background var(--transition);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  left: 0.125rem;
+  bottom: 0.125rem;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform var(--transition);
+}
+
+.switch input:checked+.slider {
+  background: var(--color-primary);
+}
+
+.switch input:checked+.slider::before {
+  transform: translateX(1.25rem);
+}
