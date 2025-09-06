@@ -26,11 +26,11 @@ function Filter() {
   };
 
   const handleAppyClick = () => {
-
-    console.log("selected value from selectOption state variable: ", selectedOption)
-  }
-
-
+    console.log(
+      "selected value from selectOption state variable: ",
+      selectedOption
+    );
+  };
 
   return (
     <>
@@ -42,6 +42,7 @@ function Filter() {
           placeholder="Search location"
           onChange={handleSelectedOption}
           className="location-select"
+          classNamePrefix="location-select"
         />
         <input type="text" placeholder="Search location..." />
         <select>

@@ -342,10 +342,32 @@ button:disabled {
   min-width: 120px;  
 }
 
-.filter-group .location-select{
+.filter-group .location-select__control {
+  background-color: var(--color-surface) !important;
+  color: var(--color-text) !important;
   min-width: 120px !important;
-  flex: 1 1 150px !important; 
+  flex: 1 1 150px !important;
 }
+/* Dropdown menu */
+.filter-group .location-select__menu {
+  background-color: var(--color-surface) !important;
+}
+
+/* Options */
+.filter-group .location-select__option {
+  background-color: var(--color-surface) !important;
+  color: var(--color-text) !important;
+}
+
+/* Selected value text */
+.filter-group .location-select__single-value {
+  color: var(--color-text) !important;
+}
+
+
+
+
+
 
 
 input[type="text"],
