@@ -336,9 +336,15 @@ button:disabled {
 
 .filter-group input,
 .filter-group select,
-.filter-group button {
+.filter-group button
+ {
   flex: 1 1 150px;   
   min-width: 120px;  
+}
+
+.filter-group .location-select{
+  min-width: 120px !important;
+  flex: 1 1 150px !important; 
 }
 
 

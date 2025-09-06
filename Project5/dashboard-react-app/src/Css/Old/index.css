@@ -75,9 +75,9 @@
   --font-sans: "Inter", "Segoe UI", Roboto, sans-serif;
 
   /* Text scales */
-  --text-small-size: 0.875rem;
-  --text-small-weight: 400;
-  --text-small-family: var(--font-sans);
+  --font-size-sm: 0.875rem;
+  --font-weight-sm: 400;
+  --font-family-sm: var(--font-sans);
 
   --text-medium-size: 1rem;
   --text-medium-weight: 400;
@@ -344,4 +344,46 @@ select {
 
 .switch input:checked+.slider::before {
   transform: translateX(1.25rem);
+}
+
+
+
+
+
+
+
+
+/* Typography utilities */
+.text-small {
+  font-size: var(--text-small-size);
+  font-weight: var(--text-small-weight);
+  font-family: var(--text-small-family);
+}
+
+.text-medium {
+  font-size: var(--text-medium-size);
+  font-weight: var(--text-medium-weight);
+  font-family: var(--text-medium-family);
+}
+
+.text-large {
+  font-size: var(--text-large-size);
+  font-weight: var(--text-large-weight);
+  font-family: var(--text-large-family);
+}
+
+.text-heading {
+  font-size: var(--text-heading-size);
+  font-weight: var(--text-heading-weight);
+}
+
+.text-kpi {
+  font-size: var(--text-kpi-size);
+  font-weight: var(--text-kpi-weight);
+}
+
+.text-label {
+  font-size: var(--text-label-size);
+  font-weight: var(--text-label-weight);
+  color: var(--color-muted);
 }
