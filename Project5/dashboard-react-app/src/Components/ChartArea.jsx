@@ -55,7 +55,7 @@ console.log(chartarea_height)
     return(
 <>
 
-<p> Display value: {area.margin.top} will be the chart area</p>
+<p> Placeholder</p>
 <div className="graph-container" style={{width: "100%", height: "500px"}}>
 <svg className="graph-svg"  >
 <rect
