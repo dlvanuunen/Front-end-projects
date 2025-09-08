@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchStations } from "../Api";
+import { fetchStations, getStationMeasurements } from "../Api";
 import Select from "react-select";
 
 // import { useState } from "react"
@@ -10,14 +10,9 @@ function Filter() {
   const [selectedOption, setSelectedOption] = useState(null);
 
   useEffect(() => {
-    fetchStations().then((list) => {
-      const sorted_list = list.sort();
-
-      setStations(sorted_list);
-      setOptions(
-        sorted_list.map((station) => ({ value: station, label: station }))
-      );
-    });
+    fetchStations().then(({dict, options}) => {  
+      setStations(dict);
+      setOptions(options);})
   }, []);
 
   const handleSelectedOption = (option) => {
@@ -27,9 +22,11 @@ function Filter() {
 
   const handleAppyClick = () => {
     console.log(
-      "selected value from selectOption state variable: ",
-      selectedOption
-    );
+      "selected value from selectOption state variable:",
+      selectedOption)
+      
+    // If selectedOption exist => run function
+     selectedOption && getStationMeasurements(selectedOption);
   };
 
   return (
@@ -46,8 +43,10 @@ function Filter() {
         />
         <input type="text" placeholder="Search location..." />
         <select>
-          {stations.map((station, index) => (
-            <option key={index}>{station}</option>
+          {options.map((station, index) => (
+            <option key={index} value={station.value}>
+              {station.label}
+            </option>
           ))}
           <option>Last 7 days</option>
           <option>Last 30 days</option>
