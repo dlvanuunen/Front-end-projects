@@ -2,9 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
-import ChartArea from './Components/ChartArea'
-import TestData from './Components/Parts/TestData'
-import Filter from './Components/Filter'
+import Dashboard from './Components/Dashboard';
 
 
 function App() {
@@ -49,36 +47,7 @@ function App() {
 
       {/* Dashboard Container */}
       <main className="container">
-        {/* KPI Cards */}
-        <section className="grid grid-3">
-          <div className="card">
-            <h3>PM2.5</h3>
-            <p className="value text-kpi">42 µg/m³</p>
-            <p className="label text-label">Moderate</p>
-          </div>
-          <div className="card">
-            <h3>CO₂</h3>
-            <p className="value text-kpi">720 ppm</p>
-            <p className="label text-label">Acceptable</p>
-          </div>
-          <div className="card">
-            <h3>O₃</h3>
-            <p className="value text-kpi">90 µg/m³</p>
-            <p className="label text-label">Elevated</p>
-          </div>
-        </section>
-
-        <Filter/>
-
-
-        {/* Chart */}
-        <section className="card">
-          <h3>Pollution</h3>
-          <p className="label text-label">Chart</p>
-          <ChartArea/>
-
-         <TestData/>
-        </section>
+          <Dashboard/>
       </main>
     </div></div>
   

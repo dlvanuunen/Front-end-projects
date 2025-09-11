@@ -1,33 +1,13 @@
 import { useEffect, useState } from "react";
-import { fetchStations, getStationMeasurements } from "../Api";
+
 import Select from "react-select";
 
 // import { useState } from "react"
 
-function Filter() {
-  const [stations, setStations] = useState([]);
-  const [options, setOptions] = useState([]);
-  const [selectedOption, setSelectedOption] = useState(null);
+function Filter({options, handleSelect, handleApply}) {
 
-  useEffect(() => {
-    fetchStations().then(({dict, options}) => {  
-      setStations(dict);
-      setOptions(options);})
-  }, []);
 
-  const handleSelectedOption = (option) => {
-    setSelectedOption(option.value);
-    console.log(`selected value changed to: ${option.value}`);
-  };
 
-  const handleAppyClick = () => {
-    console.log(
-      "selected value from selectOption state variable:",
-      selectedOption)
-      
-    // If selectedOption exist => run function
-     selectedOption && getStationMeasurements(selectedOption);
-  };
 
   return (
     <>
@@ -37,7 +17,7 @@ function Filter() {
           options={options}
           isSearchable={true}
           placeholder="Search location"
-          onChange={handleSelectedOption}
+          onChange={handleSelect}
           className="location-select"
           classNamePrefix="location-select"
         />
@@ -53,7 +33,7 @@ function Filter() {
           <option>Last year</option>
         </select>
 
-        <button onClick={handleAppyClick}>Apply</button>
+        <button onClick={handleApply}>Apply</button>
       </section>
     </>
   );
