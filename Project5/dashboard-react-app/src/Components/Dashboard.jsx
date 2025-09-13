@@ -123,7 +123,7 @@ function formatF(formula) {
       <section className="card">
         <h3>Pollution</h3>
         <p className="label text-label">Chart</p>
-        <ChartArea />
+        <ChartArea data={measurements[selectedOption]} />
 
         <TestData />
       </section>

@@ -1,10 +1,31 @@
 import { useState } from "react";
-
+import { useEffect, useRef } from "react";
 import * as d3 from "d3"
 
 
-function ChartArea(){
+function ChartArea({data2}){
+  const containerRef = useRef(null);
+  const [width, setWidth] = useState(200);
+  const [height, setHeight] = useState(200);
 
+    useEffect(() => {
+    if (!containerRef.current) return;
+
+    const observer = new ResizeObserver((entries) => {
+      const newWidth = entries[0].contentRect.width;
+      setWidth(newWidth);
+
+      // replicate your Svelte formula
+      const newHeight = Math.min(
+        newWidth * (1 - 0.4 * Math.min(1, newWidth / 1000)),
+        400
+      );
+      setHeight(newHeight);
+    });
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
 const data = [{x: 1, y:4}, {x:2, y: 16}, {x:3, y:32}]
 
@@ -41,14 +62,10 @@ const area = {
 const config = {area:area, axis:axis, theme:theme}
 
 
-let width = 400
-let height = 400
-
 
 let chartarea_width = (width - area.margin.left - area.margin.right);
 let chartarea_height = (height-area.margin.top-area.margin.bottom);
 
-console.log(chartarea_height)
 
 
 
@@ -56,8 +73,8 @@ console.log(chartarea_height)
 <>
 
 <p> Placeholder</p>
-<div className="graph-container" style={{width: "100%", height: "500px"}}>
-<svg className="graph-svg"  >
+<div className="graph-container" ref={containerRef} >
+<svg className="graph-svg" width={width} height={height}  >
 <rect
   width={width}
   height={height}
@@ -69,7 +86,16 @@ console.log(chartarea_height)
   height={chartarea_height}
   fill={theme.chartarea_color}
   />   </g>
-
+   {data.map((d, i) => (
+        <rect
+          key={i}
+          x={d.x}
+          y={d.y} // initial position (React renders)
+          width={10}
+          height={height - d.y}
+          fill="steelblue"
+        />
+      ))}
 </svg>
 </div>
 </>
