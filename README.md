@@ -5,23 +5,42 @@ Here I take a more structured approach while also expanding my skillset to inclu
 
 The goal is finish projects within 1-3 weeks by creating minimal viable products (MVP's). With this approach, the focus is on learning and improving, not on finishing polished products.
 
-Descriptions:
+## 📂 Projects
 
-Project 0: Setup and Github test.
-Project 1: Simple counter app with increase/decrease buttons.
-Project 2: Simple to-do list app.
-Project 3: Anime Finder App: fetches data from an API to display anime movies and series in a card based layout.
-Project 4: Rebuild a landingpage design from scratch (Focus on CSS).
-Project 5: Luchtmeetnet dashboard: fetch data from api and display most recent values in cards and a graph of the past days. (W.I.P)
+- Project 0 – **Setup and GitHub Test**  
+  Initial repository setup and **GitHub** workflow test.
 
-Preview: Full page screenshot of the projects.
+- Project 1 – **Counter App**  
+  A simple counter with **increase** and **decrease** buttons.
+
+- Project 2 – **To-Do List App**  
+  A minimal task manager for creating and tracking to-do items.
+
+- Project 3 – **Anime Finder App**  
+  Fetches data from an **anime API** and displays movies/series in a **card-based layout**.
+
+- Project 4 – **Landing Page Rebuild**  
+  Recreated a landing page design **from scratch**, focusing on **CSS styling and layout**.
+
+- Project 5 – **Luchtmeetnet Dashboard** *(W.I.P.)*  
+  Fetches live data from the **Luchtmeetnet API** and displays:
+  - Most recent values in cards  
+  - A graph showing trends over the past days      
+
+#
 
 
+- **🖼️ Preview** *(W.I.P.)*  
+   Full-page screenshots of the projects will be added here. 
+
+
+---
 
 
 
 
 Currently also working on a fullstack Supabase/Next.js webshop integrated with Mollie payments. Will upload to a public repo when MVP is finished.  
+
 
 
 
