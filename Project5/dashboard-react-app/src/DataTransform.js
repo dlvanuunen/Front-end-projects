@@ -1,5 +1,5 @@
 export function filterByCompound(data, compound) {
-  return data.filter(data.compound === compound);
+  return data.filter(item.formula === compound);
 }
 
 export function latestByCompound(data) {
@@ -24,6 +24,18 @@ export function latestByCompound(data) {
 }
 
 
+
+export function availableCompounds(latest){
+const formulas=  latest.map( item => item.formula)
+  return [...new Set(formulas)]; // removes duplicates
+}
+
+
+
+
+
+
+
 export function topByPriority(data, priorityList, n=3){
 
   const result = [];
@@ -31,7 +43,7 @@ export function topByPriority(data, priorityList, n=3){
   for (const formula of priorityList) {
     if (data[formula]) {
       result.push(data[formula]);
-      if (result.length === n) break; // stop once we have enough
+      if (result.length === n) break;
     }
   }
 

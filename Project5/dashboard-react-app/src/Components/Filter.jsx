@@ -4,11 +4,7 @@ import Select from "react-select";
 
 // import { useState } from "react"
 
-function Filter({options, handleSelect, handleApply}) {
-
-
-
-
+function Filter({ options, formulas, handleSelectOption, handleSelectFormula, handleApply }) {
   return (
     <>
       {/* Filters */}
@@ -17,23 +13,41 @@ function Filter({options, handleSelect, handleApply}) {
           options={options}
           isSearchable={true}
           placeholder="Search location"
-          onChange={handleSelect}
+          onChange={handleSelectOption}
           className="location-select"
           classNamePrefix="location-select"
+          styles={{
+            container: (base) => ({
+              ...base,
+              flex: "1 1 0",
+              minWidth: 200,
+            }),
+            control: (base) => ({
+              ...base,
+              width: "100%", // ensure it fills the container
+            }),
+          }}
+       
         />
-        <input type="text" placeholder="Search location..." />
+        {/* <input type="text" placeholder="Search location..." /> */}
+    
         <select>
-          {options.map((station, index) => (
-            <option key={index} value={station.value}>
-              {station.label}
+    
+          <option>Last 24 h</option>
+          <option>Last 48 h</option>
+          <option>Last Week</option>
+        </select>
+          <button onClick={handleApply}>Apply</button>
+
+          <select onChange={handleSelectFormula}>
+              {formulas.map((item, index) => (
+            <option key={index} value={item}>
+              {item}
             </option>
           ))}
-          <option>Last 7 days</option>
-          <option>Last 30 days</option>
-          <option>Last year</option>
-        </select>
+          </select>
 
-        <button onClick={handleApply}>Apply</button>
+      
       </section>
     </>
   );

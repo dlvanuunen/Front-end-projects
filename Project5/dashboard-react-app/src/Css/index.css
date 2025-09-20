@@ -338,30 +338,33 @@ button:disabled {
 .filter-group select,
 .filter-group button
  {
-  flex: 1 1 150px;   
-  min-width: 120px;  
+  flex: 1 1 0 !important;   /* every child takes equal space */
+  min-width: 0;
 }
 
 .filter-group .location-select__control {
   background-color: var(--color-surface) !important;
   color: var(--color-text) !important;
-  min-width: 120px !important;
-  flex: 1 1 150px !important;
+
 }
 /* Dropdown menu */
 .filter-group .location-select__menu {
   background-color: var(--color-surface) !important;
+
 }
 
 /* Options */
 .filter-group .location-select__option {
   background-color: var(--color-surface) !important;
   color: var(--color-text) !important;
+
 }
 
 /* Selected value text */
 .filter-group .location-select__single-value {
   color: var(--color-text) !important;
+    width: 100% !important; /* so it fills its flex slot */
+  min-width: 0 !important; /* prevent React Select from fighting flex */
 }
 
 
