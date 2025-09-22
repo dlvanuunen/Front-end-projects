@@ -339,7 +339,7 @@ button:disabled {
 .filter-group button
  {
   flex: 1 1 0 !important;   /* every child takes equal space */
-  min-width: 0;
+  min-width: 100px;
 }
 
 .filter-group .location-select__control {

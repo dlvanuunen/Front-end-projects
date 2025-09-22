@@ -4,7 +4,7 @@ import Select from "react-select";
 
 // import { useState } from "react"
 
-function Filter({ options, formulas, handleSelectOption, handleSelectFormula, handleApply }) {
+function Filter({ options, formulas, handleSelectOption, selectedFormula, handleSelectFormula, handleApply }) {
   return (
     <>
       {/* Filters */}
@@ -39,7 +39,7 @@ function Filter({ options, formulas, handleSelectOption, handleSelectFormula, ha
         </select>
           <button onClick={handleApply}>Apply</button>
 
-          <select onChange={handleSelectFormula}>
+          <select value = {selectedFormula} onChange={handleSelectFormula}>
               {formulas.map((item, index) => (
             <option key={index} value={item}>
               {item}

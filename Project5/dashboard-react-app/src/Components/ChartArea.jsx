@@ -2,22 +2,23 @@ import { useState } from "react";
 import { useEffect, useRef } from "react";
 import Bars from "./Chartparts/Bars";
 import Axes from "./Chartparts/Axes";
+import {filterByCompound} from "../DataTransform.js"
 
 import * as d3 from "d3";
 
 
     const initialData = [
-    { value: NaN, timestamp_measured: "2025-09-17T12:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T11:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T10:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T08:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T09:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T07:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T09:00:00+00:00", formula: "PM10" },
-    { value: NaN, timestamp_measured: "2025-09-17T12:00:00+00:00", formula: "PM25" },
-    { value: NaN, timestamp_measured: "2025-09-17T11:00:00+00:00", formula: "PM25" },
-    { value: NaN, timestamp_measured: "2025-09-17T10:00:00+00:00", formula: "PM25" },
-    { value: NaN, timestamp_measured: "2025-09-17T09:00:00+00:00", formula: "PM25" },
+    { value: 0, timestamp_measured: "2025-09-17T12:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T11:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T10:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T08:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T09:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T07:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T09:00:00+00:00", formula: "PM10" },
+    { value: 0, timestamp_measured: "2025-09-17T12:00:00+00:00", formula: "PM25" },
+    { value: 0, timestamp_measured: "2025-09-17T11:00:00+00:00", formula: "PM25" },
+    { value: 0, timestamp_measured: "2025-09-17T10:00:00+00:00", formula: "PM25" },
+    { value: 0, timestamp_measured: "2025-09-17T09:00:00+00:00", formula: "PM25" },
   ];
   
 
@@ -27,6 +28,23 @@ function ChartArea({ measurement, formula }) {
   const [height, setHeight] = useState(200);
 
 
+  useEffect(() => {
+  if (!containerRef.current) return;
+
+  const observer = new ResizeObserver((entries) => {
+    const { width: newWidth, height: newHeight } = entries[0].contentRect;
+
+    const adjustedHeight = newWidth * (1 - 0.4 * Math.min(1, newWidth / 1000))
+
+    setWidth(newWidth);
+    setHeight(adjustedHeight);
+  });
+
+  observer.observe(containerRef.current);
+  return () => observer.disconnect();
+}, []);
+
+
   // const data = [
   //   { x: 1, y: 4 },
   //   { x: 2, y: 16 },
@@ -34,7 +52,7 @@ function ChartArea({ measurement, formula }) {
   // ];
 
 
-  const data = (measurement || initialData).map(d => ({
+  const data = (filterByCompound(measurement,formula) || initialData).map(d => ({
   x: new Date(d.timestamp_measured), // convert ISO string to JS Date
   y: d.value,
   formula: d.formula,                // keep extra info if needed
@@ -66,6 +84,7 @@ function ChartArea({ measurement, formula }) {
   const theme = {
     background_color: "white",
     chartarea_color: "white",
+    color: "#b83280",
     axis: {
       color: "black",
       stroke: "rgba(0, 0, 0, 1)",
@@ -98,7 +117,7 @@ function ChartArea({ measurement, formula }) {
 
   return (
     <>
-      <p> Placeholder</p>
+   
       <div className="chart-container" ref={containerRef}>
         <svg className="chart-svg" width={width} height={height}>
              
@@ -119,6 +138,7 @@ function ChartArea({ measurement, formula }) {
               yScale={yScale}
               height={chartarea_height}
               width={chartarea_width}
+              config={config}
             />
             <Axes
               xScale={xScale}

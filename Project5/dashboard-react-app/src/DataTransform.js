@@ -1,5 +1,29 @@
+  //  Formatting for display
+   const formulaFMap = {
+    PM25: "PM2.5",
+    PM10: "PM10",
+    O3: "O₃",
+    NO2: "NO₂",
+    CO2: "CO₂",
+    SO2: "SO₂",
+    PS: "PS",
+  };
+  
+  export function formatF(formula) {
+    return formulaFMap[formula] ?? formula; // fallback to original
+  }
+
+
+
+
+
+
+
 export function filterByCompound(data, compound) {
-  return data.filter(item.formula === compound);
+  if (!Array.isArray(data) || !compound) {
+    return null;
+  }
+  return data.filter(item => item.formula === compound);
 }
 
 export function latestByCompound(data) {

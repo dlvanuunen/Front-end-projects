@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import * as d3 from "d3";
 
 import ChartArea from "./ChartArea";
@@ -6,30 +6,23 @@ import ChartArea from "./ChartArea";
 import Filter from "./Filter";
 
 import { fetchStations, getStationMeasurements } from "../Api";
-import { latestByCompound, topByPriority} from "../DataTransform";
+import { latestByCompound, topByPriority, formatF } from "../DataTransform";
 
 function Dashboard() {
   const [stations, setStations] = useState([]);
   const [options, setOptions] = useState([]);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedFormula, setSelectedFormula]=useState("PM10")
+  const [selectedFormula, setSelectedFormula] = useState("PM10");
   const [measurements, setMeasurements] = useState({});
-  const [formulaOptions, setFormulaOptions] = useState([])
-  const [kpiValues, setKpiValues] = useState([
-    { formula: "PM25", value: 0 },
-    { formula: "PM10", value: 0 },
-    { formula: "NO2", value: 0 },
-  ]);
 
-  const formulaFMap = {
-  PM25: "PM2.5",
-  PM10: "PM10",
-  O3: "O₃",
-  NO2: "NO₂",
-  CO2: "CO₂",
-  SO2: "SO₂",
-  PS: "PS"
- };
+
+  useEffect(() => {
+    fetchStations().then(({ dict, options }) => {
+      setStations(dict);
+      setOptions(options);
+    });
+  }, []);
+
 
 
   const priorityList = [
@@ -45,15 +38,39 @@ function Dashboard() {
     "C8H10",
     "PS",
     "FN",
-    "BCWB"
+    "BCWB",
   ];
 
+
+//  If measurement changes update the formula options
+    const formulaOptions = useMemo(() => {
+    const data = measurements[selectedOption] ?? [];
+    if (!Array.isArray(data) || data.length === 0) return [];
+    return [...new Set(data.map(d => d.formula).filter(Boolean))];
+  }, [measurements, selectedOption]);
+
+  // Make sure selectedFormula is valid for the new station
   useEffect(() => {
-    fetchStations().then(({ dict, options }) => {
-      setStations(dict);
-      setOptions(options);
-    });
-  }, []);
+    if (formulaOptions.length === 0) {
+      setSelectedFormula("");
+      return;
+    }
+    // if current selectedFormula still exists keep it, else pick the first in the new list of formula options
+    if (!selectedFormula || !formulaOptions.includes(selectedFormula)) {
+      setSelectedFormula(formulaOptions[0]);
+    }
+  }, [formulaOptions, selectedFormula]); // intentionally not including selectedFormula here
+
+
+
+    const kpiValues = useMemo(() => {
+    const data = measurements[selectedOption] ?? [];
+    // Gets the most recent entry for each compound which we need to display in the kpi cards)
+    const latest = latestByCompound(data);
+    const top3 = topByPriority(latest, priorityList, 3);
+    while (top3.length < 3) top3.push({ formula: "N/A", value: "N/A", label: "N/A" });
+    return top3;
+  }, [measurements, selectedOption]);
 
 
   const handleSelectedOption = (option) => {
@@ -62,14 +79,20 @@ function Dashboard() {
   };
 
 
+
+  // #####################################################################################//
+
+  // OLD comments:
   // Applies filter selection:
   // Fetches new data for selected location.
   // Sets KPI cards for latest measurement with highest priority formula.
   // Sets formula filter options for the graph
 
-  // Consideration for rework/next project: Fetch only once, store results in state. 
+  // Consideration for rework/next project: Fetch only once, store results in state.
   // Add a filter state with all filterable options and useEffect on the options state to update on change without recalling api's.
 
+  //New comments:
+  // Moved logic for filter options and kpi cards to memo, so they are derived from the current selected measearument (measurements[selectedOption])
 
   const handleApplyClick = async () => {
     console.log(
@@ -82,7 +105,6 @@ function Dashboard() {
       console.log("Station data already exist, not calling api");
       return;
     }
-
     // If selectedOption exist => run function
     const data = await getStationMeasurements(selectedOption);
     setMeasurements((prev) => ({ ...prev, [selectedOption]: data }));
@@ -90,68 +112,58 @@ function Dashboard() {
       `measurement for station ${selectedOption} loaded and stored in: `,
       data
     );
-
-    const latest = latestByCompound(data);
-    const top3 = topByPriority(latest, priorityList, 3);
-    while (top3.length < 3) top3.push([{ formula: "N/A", value: "N/A", label: "N/A" }]);
-    setKpiValues(top3);
-
-    const formulas = Object.keys(latest); 
-    console.log(formulas)
-    setFormulaOptions(formulas)
+ 
   };
 
+  // #####################################################################################//
+
   const handleSelectedFormula = (e) => {
-    const value = e.target.value
-    setSelectedFormula(value)
-        console.log("selected formula:", value)
-
-  }
-   
-
-function formatF(formula) {
-  return formulaFMap[formula] ?? formula; // fallback to original
-}
-
-
+    const value = e.target.value;
+    setSelectedFormula(value);
+    console.log("selected formula:", value);
+  };
 
 
 
   return (
     <>
       <section className="grid grid-3">
-         <div className="card">
+        <div className="card">
           <h3>{formatF(kpiValues[0].formula)}</h3>
           <p className="value text-kpi">{`${kpiValues[0].value} μg/m³`}</p>
           <p className="label text-label">Moderate</p>
         </div>
         <div className="card">
-      <h3>{formatF(kpiValues[1].formula)}</h3>
-         <p className="value text-kpi">{`${kpiValues[1].value} μg/m³`}</p>
+          <h3>{formatF(kpiValues[1].formula)}</h3>
+          <p className="value text-kpi">{`${kpiValues[1].value} μg/m³`}</p>
           <p className="label text-label">Moderate</p>
         </div>
         <div className="card">
-       <h3>{formatF(kpiValues[2].formula)}</h3>
-         <p className="value text-kpi">{`${kpiValues[2].value} μg/m³`}</p>
+          <h3>{formatF(kpiValues[2].formula)}</h3>
+          <p className="value text-kpi">{`${kpiValues[2].value} μg/m³`}</p>
           <p className="label text-label">Moderate</p>
         </div>
       </section>
 
       <Filter
         options={options}
-        formulas= {formulaOptions}
+        formulas={formulaOptions}
         handleSelectOption={handleSelectedOption}
         handleApply={handleApplyClick}
         handleSelectFormula={handleSelectedFormula}
+        selectedFormula={selectedFormula}
       />
 
       {/* Chart */}
       <section className="card">
         <h3>Pollution</h3>
-        <p className="label text-label">Chart</p>
+
         {/* <ChartArea data={measurements[selectedOption]} selectedFormula={selectedFormula} /> */}
-       <ChartArea measurement={measurements[selectedOption]} formula={selectedFormula}/>
-            </section>
+        <ChartArea
+          measurement={measurements[selectedOption] ?? null}
+          formula={selectedFormula}
+        />
+      </section>
     </>
   );
 }
