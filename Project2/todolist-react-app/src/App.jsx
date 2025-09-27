@@ -12,7 +12,7 @@ function App() {
       
       <h1>To do list app</h1>
  
-      <p> This is a simple to do list app without styling </p>
+      <p> This is a simple to do list app</p>
 
       <ToDoList/>
         

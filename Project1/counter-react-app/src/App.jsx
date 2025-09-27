@@ -12,7 +12,6 @@ function App() {
       <div>
 
       <h1> React super simple app </h1> 
-    <p> test paragraph, woaa its all centered </p>
       <Counter/>
  
 

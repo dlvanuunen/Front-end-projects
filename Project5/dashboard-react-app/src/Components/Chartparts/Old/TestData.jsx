@@ -1,6 +1,6 @@
 // import fetchData from "../../Api";
 
-import { fetchStations } from "../../Api"
+import { fetchStations } from "../../../Api"
 
 function TestData(){
 

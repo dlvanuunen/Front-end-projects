@@ -15,6 +15,7 @@ function Message(){
         
         <>
         <input onChange={handleOnChange} id='input-message'></input>
+        <p>Typed message:</p>
         <label htmlFor='input-message' >{inputMessage}</label>  
         
    

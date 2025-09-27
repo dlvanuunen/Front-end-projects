@@ -21,7 +21,7 @@ function Counter() {
 
       <button onClick={handleOnClickIncrease}>Click here!</button>
 
-      <button onClick={handleOnClickDecrease}>Sad times...</button>
+      <button onClick={handleOnClickDecrease}>Subtract</button>
     </>
   );
 }
