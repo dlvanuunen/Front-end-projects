@@ -156,7 +156,7 @@ function Dashboard() {
 
       {/* Chart */}
       <section className="card">
-        <h3>Pollution</h3>
+        <h3>{selectedFormula}</h3>
 
         {/* <ChartArea data={measurements[selectedOption]} selectedFormula={selectedFormula} /> */}
         <ChartArea
