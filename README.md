@@ -30,16 +30,11 @@ The goal is finish projects within 1-3 weeks by creating minimal viable products
 #
 
 
-- **🖼️ Preview** *(W.I.P.)*  
-   Full-page screenshots of the projects will be added here. 
-
 
 ---
 
 
 
-
-Currently also working on a fullstack Supabase/Next.js webshop integrated with Mollie payments. Will upload to a public repo when MVP is finished.  
 
 
 
