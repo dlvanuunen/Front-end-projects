@@ -22,7 +22,7 @@ The goal is finish projects within 1-3 weeks by creating minimal viable products
 - Project 4 – **Landing Page Rebuild**  
   Recreated a landing page design **from scratch**, focusing on **CSS styling and layout**.
 
-- Project 5 – **Luchtmeetnet Dashboard** *(W.I.P.)*  
+- Project 5 – **Luchtmeetnet Dashboard**  
   Fetches live data from the **Luchtmeetnet API** and displays:
   - Most recent values in cards  
   - A graph showing trends over the past days      
