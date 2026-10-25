@@ -1,9 +1,12 @@
 ﻿# Front-end-projects
 
-This is a repo for front-end practice projects. While I already have some experience with python and html/css/javascript. Most of the projects were unstructured or only small scripts and/or subject to previous employees intellectual property.
-Here I take a more structured approach while also expanding my skillset to include the use of Github, npm and a front-end framework (in this case React).
+This is a repo for front-end practice projects, the goal was to finish projects quickly and focus on learning and improving instead of polished products.
 
-The goal is finish projects within 1-3 weeks by creating minimal viable products (MVP's). With this approach, the focus is on learning and improving, not on finishing polished products.
+Skills learned:
+- Using API's
+- React basics
+- CSS
+- Building website layout with CSS from a design file
 
 ## 📂 Projects
 
